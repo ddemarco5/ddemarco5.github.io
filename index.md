@@ -49,15 +49,16 @@ As far as programming goes, at the time of writing, I am properly driving the MA
 ---
   
 ### Serial over LoRA
+<p>
 <div class="row">
   <div class="column">
     <img src="https://cdn.hackaday.io/images/6317041498596792862.jpg" width="200">
   </div>
   <div class="column">
     <img src="https://cdn.hackaday.io/images/9159631498596820878.jpg" width="200">
-    </br>
   </div>
 </div>  
+</p>
 
 **Hackaday link:** [https://hackaday.io/project/25677-chirppp-serial-over-lora](https://hackaday.io/project/25677-chirppp-serial-over-lora)  
 **Radio Driver:** [https://github.com/ddemarco5/lora_driver](https://github.com/ddemarco5/lora_driver)  
