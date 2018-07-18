@@ -12,20 +12,20 @@ On this page you'll see the results of that practice.
 
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
-These links will bring you to the associated headings to save your scroll wheel the trouble </br>
-[Radio Board](#radio-board)</br>
-[Serial over LoRA](#serial-over-lora)</br>
-[Python Racing Game Bot](#python-racing-game-bot)</br>
-[Pascal-like Compiler](#pascal-like-compiler)</br>
-[Sensor Movement Classification](#sensor-movement-classification)</br>
+These links will bring you to the associated headings to save your scroll wheel the trouble
+[Radio Board](#radio-board)
+[Serial over LoRA](#serial-over-lora)
+[Python Racing Game Bot](#python-racing-game-bot)
+[Pascal-like Compiler](#pascal-like-compiler)
+[Sensor Movement Classification](#sensor-movement-classification)
 
-</br>
+
 
 ### Radio Board
 <img src="images/pcb_image.png" width="200">
 
-**Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb </br>
-**Code:** https://github.com/ddemarco5/RadioCode </br>
+**Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb
+**Code:** https://github.com/ddemarco5/RadioCode
 
 My first foray into circuit design and construction, and my current work in progress. The design was largely based around what parts I had gathered in my dragon's nest of electronics. Before this, the most advanced I had gotten was a little breadboard tinkering and Arduino work.
 The general idea is to have a single board with 3 chips. A MAX7221 to drive the display, a SI4734-D60 to act as the radio, and an ATTINY861 to control the other 2. There's a rotary encoder to enable control, and a 3.5mm jack to allow for audio output.
@@ -46,7 +46,7 @@ If I were to do it again I would've spend more time in the prototyping stage (bu
 
 As far as programming goes, at the time of writing, I am properly driving the MAX7221 via a software SPI implementation. I'm currently trying to get the (much more complicated) radio chip to respond.
 
-</br>
+
 
 ### Serial over LoRA
 <div class="row">
@@ -58,9 +58,9 @@ As far as programming goes, at the time of writing, I am properly driving the MA
   </div>
 </div>
 
-**Hackaday link:** https://hackaday.io/project/25677-chirppp-serial-over-lora </br>
-**Radio Driver:** https://github.com/ddemarco5/lora_driver </br>
-**Serial Emulator:** https://github.com/ddemarco5/chirppp </br>
+**Hackaday link:** https://hackaday.io/project/25677-chirppp-serial-over-lora
+**Radio Driver:** https://github.com/ddemarco5/lora_driver 
+**Serial Emulator:** https://github.com/ddemarco5/chirppp 
 
 To date this is one of my favorite projects. The idea was to leverage posix standards to communicate and drive a pair of LoRA radio modules and expose a functional serial device to an end user of the system.
 
@@ -85,7 +85,7 @@ I had achieved a rudimentary wifi that at best could achieve a several kilometer
 
 In practice though, the radio devices at max speed had barely enough bandwidth to maintain a tcp/ip connection, let alone a usable one. It was also hampered by the fact the the (admittedly cheap) radio modules I bought suffer from frequent false positives when receiving packets. I might revisit this project to try and further debug the problem, or at the very least work around it.
 
-</br>
+
 
 ### Python Racing Game Bot
 
@@ -97,7 +97,7 @@ This is a much smaller project than some of the others. The idea behind this one
 
 The actual logic behind the bot's decisions were simple pixel triggers, the focus was more on getting some experience with the WinAPI.
 
-</br>
+
 
 ### Pascal-like Compiler
 
