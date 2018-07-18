@@ -24,8 +24,8 @@ These links will bring you to the associated headings to save your scroll wheel 
 ### Radio Board
 <img src="images/pcb_image.png" width="200">
 
-**Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb  
-**Code:** https://github.com/ddemarco5/RadioCode  
+**Circuit Design and PCB:** [https://github.com/ddemarco5/design-pcb](https://github.com/ddemarco5/design-pcb)  
+**Code:** [https://github.com/ddemarco5/RadioCode](https://github.com/ddemarco5/RadioCode)  
   
 My first foray into circuit design and construction, and my current work in progress. The design was largely based around what parts I had gathered in my dragon's nest of electronics. Before this, the most advanced I had gotten was a little breadboard tinkering and Arduino work.
 The general idea is to have a single board with 3 chips. A MAX7221 to drive the display, a SI4734-D60 to act as the radio, and an ATTINY861 to control the other 2. There's a rotary encoder to enable control, and a 3.5mm jack to allow for audio output.
@@ -56,11 +56,11 @@ As far as programming goes, at the time of writing, I am properly driving the MA
   <div class="column">
     <img src="https://cdn.hackaday.io/images/9159631498596820878.jpg" width="200">
   </div>
-</div>
+</div>  
 
-**Hackaday link:** https://hackaday.io/project/25677-chirppp-serial-over-lora  
-**Radio Driver:** https://github.com/ddemarco5/lora_driver  
-**Serial Emulator:** https://github.com/ddemarco5/chirppp  
+**Hackaday link:** [https://hackaday.io/project/25677-chirppp-serial-over-lora](https://hackaday.io/project/25677-chirppp-serial-over-lora)  
+**Radio Driver:** [https://github.com/ddemarco5/lora_driver](https://github.com/ddemarco5/lora_driver)  
+**Serial Emulator:** [https://github.com/ddemarco5/chirppp](https://github.com/ddemarco5/chirppp)  
   
 To date this is one of my favorite projects. The idea was to leverage posix standards to communicate and drive a pair of LoRA radio modules and expose a functional serial device to an end user of the system.
 
@@ -89,7 +89,7 @@ In practice though, the radio devices at max speed had barely enough bandwidth t
   
 ### Python Racing Game Bot
 
-**Code:** https://github.com/ddemarco5/Redline
+**Code:** [https://github.com/ddemarco5/Redline](https://github.com/ddemarco5/Redline])  
 
 A simple project I decided to write when a drag racing game I was playing at the time got a little too repetitive.
 
@@ -101,7 +101,7 @@ The actual logic behind the bot's decisions were simple pixel triggers, the focu
   
 ### Pascal-like Compiler
 
-**Code:** https://github.com/ddemarco5/pascal_compiler
+**Code:** [https://github.com/ddemarco5/pascal_compiler](https://github.com/ddemarco5/pascal_compiler)  
 
 One of the last projects done in my college career.
 
@@ -112,7 +112,7 @@ I unfortunately had to stop working on the project before codegen was 100% compl
 ---
   
 ### Sensor Movement Classification
-**Code:** https://github.com/ddemarco5/SensorMovementClassification
+**Code:** [https://github.com/ddemarco5/SensorMovementClassification](https://github.com/ddemarco5/SensorMovementClassification)  
 
 An android application written for an independent study done in college.
 The app allowed a user to train on movement and later recognize those movements. The intention was to use it in a larger project where software would be able to recognize what its user was doing. Standing, sitting, running, etc.
