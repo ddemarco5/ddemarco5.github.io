@@ -12,21 +12,21 @@ On this page you'll see the results of that practice.
 
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
-These links will bring you to the associated headings to save your scroll wheel the trouble
-[Radio Board](#radio-board)
-[Serial over LoRA](#serial-over-lora)
-[Python Racing Game Bot](#python-racing-game-bot)
-[Pascal-like Compiler](#pascal-like-compiler)
-[Sensor Movement Classification](#sensor-movement-classification)
+These links will bring you to the associated headings to save your scroll wheel the trouble  
+[Radio Board](#radio-board)  
+[Serial over LoRA](#serial-over-lora)  
+[Python Racing Game Bot](#python-racing-game-bot)  
+[Pascal-like Compiler](#pascal-like-compiler)  
+[Sensor Movement Classification](#sensor-movement-classification)  
 
-
-
+---
+  
 ### Radio Board
 <img src="images/pcb_image.png" width="200">
 
-**Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb
-**Code:** https://github.com/ddemarco5/RadioCode
-
+**Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb  
+**Code:** https://github.com/ddemarco5/RadioCode  
+  
 My first foray into circuit design and construction, and my current work in progress. The design was largely based around what parts I had gathered in my dragon's nest of electronics. Before this, the most advanced I had gotten was a little breadboard tinkering and Arduino work.
 The general idea is to have a single board with 3 chips. A MAX7221 to drive the display, a SI4734-D60 to act as the radio, and an ATTINY861 to control the other 2. There's a rotary encoder to enable control, and a 3.5mm jack to allow for audio output.
 
@@ -44,10 +44,10 @@ I'm still actively working on this one and it's taught me a truly incredible amo
 
 If I were to do it again I would've spend more time in the prototyping stage (but I'm limited by tools and space), as the first revision had some design errors in some of the more complex things I attempted (hardware debouncing with RC filter circuits, etc). I ended up having to frankenstein a portion of the traces and rework the design into something functional without having to rebuild the entire board.
 
-As far as programming goes, at the time of writing, I am properly driving the MAX7221 via a software SPI implementation. I'm currently trying to get the (much more complicated) radio chip to respond.
+As far as programming goes, at the time of writing, I am properly driving the MAX7221 via a software SPI implementation. I'm currently trying to get the (much more complicated) radio chip to respond.  
 
-
-
+---
+  
 ### Serial over LoRA
 <div class="row">
   <div class="column">
@@ -58,10 +58,10 @@ As far as programming goes, at the time of writing, I am properly driving the MA
   </div>
 </div>
 
-**Hackaday link:** https://hackaday.io/project/25677-chirppp-serial-over-lora
-**Radio Driver:** https://github.com/ddemarco5/lora_driver 
-**Serial Emulator:** https://github.com/ddemarco5/chirppp 
-
+**Hackaday link:** https://hackaday.io/project/25677-chirppp-serial-over-lora  
+**Radio Driver:** https://github.com/ddemarco5/lora_driver  
+**Serial Emulator:** https://github.com/ddemarco5/chirppp  
+  
 To date this is one of my favorite projects. The idea was to leverage posix standards to communicate and drive a pair of LoRA radio modules and expose a functional serial device to an end user of the system.
 
 The things I wanted to accomplish in this project were:
@@ -83,10 +83,10 @@ Once I had serial communication between the two devices, I was able to use the o
 
 I had achieved a rudimentary wifi that at best could achieve a several kilometer range! Woohoo!  ... at least in theory. 
 
-In practice though, the radio devices at max speed had barely enough bandwidth to maintain a tcp/ip connection, let alone a usable one. It was also hampered by the fact the the (admittedly cheap) radio modules I bought suffer from frequent false positives when receiving packets. I might revisit this project to try and further debug the problem, or at the very least work around it.
+In practice though, the radio devices at max speed had barely enough bandwidth to maintain a tcp/ip connection, let alone a usable one. It was also hampered by the fact the the (admittedly cheap) radio modules I bought suffer from frequent false positives when receiving packets. I might revisit this project to try and further debug the problem, or at the very least work around it.  
 
-
-
+---
+  
 ### Python Racing Game Bot
 
 **Code:** https://github.com/ddemarco5/Redline
@@ -95,10 +95,10 @@ A simple project I decided to write when a drag racing game I was playing at the
 
 This is a much smaller project than some of the others. The idea behind this one was to use python to try and interface with WinAPI to find the game's window and its dimensions, emulate keypresses, and capture image data from the screen.
 
-The actual logic behind the bot's decisions were simple pixel triggers, the focus was more on getting some experience with the WinAPI.
+The actual logic behind the bot's decisions were simple pixel triggers, the focus was more on getting some experience with the WinAPI.  
 
-
-
+---
+  
 ### Pascal-like Compiler
 
 **Code:** https://github.com/ddemarco5/pascal_compiler
@@ -107,8 +107,10 @@ One of the last projects done in my college career.
 
 Written in C, we had to create a compiler for a Pascal-like language that was defined in class.
 We used lex and yacc to generate the lexiacal analyzer and parser, but codegen was up to us.
-I unfortunately had to stop working on the project before codegen was 100% completed. It didn't construct proper loops, but it worked for simple calculator-esque evaluation and assignment statements.
+I unfortunately had to stop working on the project before codegen was 100% completed. It didn't construct proper loops, but it worked for simple calculator-esque evaluation and assignment statements.  
 
+---
+  
 ### Sensor Movement Classification
 **Code:** https://github.com/ddemarco5/SensorMovementClassification
 
