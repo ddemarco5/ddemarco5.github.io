@@ -84,7 +84,7 @@ In practice though, the radio devices at max speed had barely enough bandwidth t
   
 ### Python Racing Game Bot
 
-**Code:** [https://github.com/ddemarco5/Redline](https://github.com/ddemarco5/Redline])  
+**Code:** [https://github.com/ddemarco5/Redline](https://github.com/ddemarco5/Redline)  
 
 A simple project I decided to write when a drag racing game I was playing at the time got a little too repetitive.
 
