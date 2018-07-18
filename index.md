@@ -55,6 +55,7 @@ As far as programming goes, at the time of writing, I am properly driving the MA
   </div>
   <div class="column">
     <img src="https://cdn.hackaday.io/images/9159631498596820878.jpg" width="200">
+    </br>
   </div>
 </div>  
 
