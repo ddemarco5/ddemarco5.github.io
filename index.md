@@ -1,3 +1,5 @@
+<img src="images/me.png" width="300">
+
 ## Hi There!
 
 Welcome! One way or another, you've stumbled upon my projects github.io page! 
@@ -20,7 +22,7 @@ These links will bring you to the associated headings to save your scroll wheel 
 </br>
 
 ### Radio Board
-<img src="https://i.imgur.com/vrPQQYU.png" width="200">
+<img src="images/pcb_image.png" width="200">
 
 **Circuit Design and PCB:** https://github.com/ddemarco5/design-pcb </br>
 **Code:** https://github.com/ddemarco5/RadioCode </br>
