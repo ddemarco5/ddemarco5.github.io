@@ -1,18 +1,19 @@
-<img src="images/me.png" width="300">
+<img src="images/me2.png" width="300">
 
-## Hi There!
+## Hi There! (I'm the one on the left)
 
-Welcome! One way or another, you've stumbled upon my projects github.io page! 
+Welcome! One way or another, you've stumbled upon my projects github.io page. Complete with mandatory "Look I've gone outside" software dev photograph.
 My name is Dominic DeMarco, my education background is a BS in Computer Science, and I currently work in the industry as a software engineer.
 
-In my free time I enjoy exploring anything technical, and I often find myself reading up on the odd technological tidbit.
-
-But reading will only get you so far! I try to commit a healthy portion of my spare time into practicing my interests.
-On this page you'll see the results of that practice.
+In my free time I enjoy exploring anything technical that has struck my fancy. A lot of these projects you'll see are based around a loose
+"accomplish X with Y" intent, it's the way I've found I best learn things... and it's fun, too!
 
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
+[Nebula Client](#nebula-client)
+[FeO](#feo)  
+[Video ESRGAN Superres](#video-esrgan-superres)  
 [Radio Board](#radio-board)  
 [Serial over LoRA](#serial-over-lora)  
 [Python Racing Game Bot](#python-racing-game-bot)  
@@ -20,7 +21,50 @@ These links will bring you to the associated headings to save your scroll wheel 
 [Sensor Movement Classification](#sensor-movement-classification)  
 
 ---
-  
+
+### Nebula Client
+**Code:** [https://github.com/ddemarco5/nebula_client](https://github.com/ddemarco5/nebula_client)  
+**Nebula:** [https://github.com/slackhq/nebula](https://github.com/slackhq/nebula)
+
+Nebula is a very cool VPN project by the folks over at slack. It's a P2P encrypted UDP VPN that only needs a "lighthouse" server to connect
+two peers together. NAT punchthrough is built in, it's performant, largely self contained, and easy to deploy.
+However, when I was playing around with it I noticed that it's largely meant as a secure, direct, NAT bypassing means of client to client communication.
+If you wanted to provide access a subnet on the same machine (like a more traditional VPN system) the use case seems to be intended for single devices or small sections of a subnet, not all traffic.
+
+This project (written in rust) is a wrapper around the nebula executable to allow it to act like a vpn client on a windows machine. This means the routing table is backed up, cleared, and set up in a way so all traffic EXCEPT the peer target is routed through the wintun adapter created by nebula.
+This is done by intercepting and parsing the stdout of nebula. When a message comes through that a peer has been connected, its IP address is pulled and added to the routing table to allow traffic to flow.
+It will also clear the DNS server and set it to the nebula peer to ensure that 100% of traffic is transmitted through the nebula connection.
+
+This project was an exploration into more advanced process control with rust, as well as to investigate the current state of direct windows API calls with rust.
+
+---
+
+### FeO
+
+**Code:** [https://github.com/ddemarco5/FeO](https://github.com/ddemarco5/FeO)
+
+I wanted to flex my rust muscles and play around with discord bot integration.
+I wrote it to initially cross-post submissions from an arbitrary reddit user to a discord channel. (Think project updates or a friend)
+Midway through development, fortuitously, youtube banned all the popular bots that were playing music in discord channels. I figured this was a perfect opportunity to write my own.
+This project uses libraries written to interface with discord text channels and voice calls, and I wrote an easily expandable system for
+advanced command processing.
+
+Commands are listend for in a specified channel, parsed, and listeners are created for youtube url songs specified. The bot will then scan the discord
+server's voice calls searching for the user who called it, join the call, and begin playing the audio stream that it transcodes to opus insitu.
+
+---
+
+### Video ESRGAN Superres
+
+**Code:** [https://github.com/ddemarco5/VideoSuperRes](https://github.com/ddemarco5/VideoSuperRes)
+
+Born of the idea of upscaling old animation and a want to learn the pytorch framework.
+With some pointers and domain knowledge from a friend, this implementation of ESRGAN was written.
+A custom video frame extractor was developed to make dropping in new files easy and to keep disk space down.
+Results with it were promising, but free time and vram limitations have put it on pause.
+
+---
+
 ### Radio Board
 <img src="images/pcb_image.png" width="200">
 
@@ -41,7 +85,6 @@ A couple goals motivated this project. I wanted to:
 7. Program in a memory constrained environment (8k program storage, 512 bytes SRAM)
 8. Watch a cool old red bubble LED display live again
 
-I'm still actively working on this one and it's taught me a truly incredible amount about hardware and circuit design.
 
 If I were to do it again I would've spend more time in the prototyping stage (but I'm limited by tools and space), as the first revision had some design errors in some of the more complex things I attempted (hardware debouncing with RC filter circuits, etc). I ended up having to frankenstein a portion of the traces and rework the design into something functional without having to rebuild the entire board.
 
