@@ -11,7 +11,7 @@ In my free time I enjoy exploring anything technical that has struck my fancy. A
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
-[Nebula Client](#nebula-client)
+[Nebula Client](#nebula-client) 
 [FeO](#feo)  
 [Video ESRGAN Superres](#video-esrgan-superres)  
 [Radio Board](#radio-board)  
