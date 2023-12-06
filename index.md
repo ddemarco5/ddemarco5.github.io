@@ -11,6 +11,7 @@ In my free time I enjoy exploring anything technical that has struck my fancy. A
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
+[Centurion CPU6 LLVM Backend](#centurion-cpu6-llvm-backend)  
 [Nebula Client](#nebula-client)  
 [FeO](#feo)  
 [Video ESRGAN Superres](#video-esrgan-superres)  
@@ -19,6 +20,21 @@ These links will bring you to the associated headings to save your scroll wheel 
 [Python Racing Game Bot](#python-racing-game-bot)  
 [Pascal-like Compiler](#pascal-like-compiler)  
 [Sensor Movement Classification](#sensor-movement-classification)  
+
+---
+### Centurion CPU6 LLVM Backend
+**Code:** [https://github.com/ddemarco5/llvm-project-centurion](https://github.com/ddemarco5/llvm-project-centurion)
+
+Midway through 2022 I stumbled across a very cool youtube channel, [Usagi Electric](https://www.youtube.com/@UsagiElectric).
+He's a very interesting dude based in Texas who found and restored a very unique minicomputer designed and built in the 80's by a forgotten company called "Centurion".
+Through the course of his resoration work and video releases he cultivated a small community around the computer, and they reverse engineered the instruction set of the very unique processor that was dubbed CPU6.
+This was very intersting to me, and I decided to take a leap into the deep and and try to write an LLVM backend for this CPU6 ISA. I've always been interested in LLVM but could never find a good reason to really sit down with it until then.
+I found an excellent (albeit slightly dated) resource from one of the developers of the RISC-V LLVM backend that was essentially a step by step git contribution history of what it takes to build a backend for LLVM, a process that is anything but straightforward.
+
+I never got far enough into the process to start implementing the codgen elements of a backend, but I was successful in implementing a fully functional ASM backend for LLVM for the CPU6.
+This means my fork of LLVM is able to use LLVM tools (llvm-as and llvm-dis) to assemble and disassemble functional ELF binaries for a minicomputer from the 1980s! Pretty cool!
+
+Currently the project sits in a good state, and if I ever get the LLVM itch again I can dive further into LLVM's codegen.
 
 ---
 
