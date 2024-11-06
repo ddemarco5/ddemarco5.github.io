@@ -3,7 +3,7 @@
 ## Hi There! (I'm the one on the left)
 
 Welcome! One way or another, you've stumbled upon my projects github.io page. Complete with mandatory "Look I've gone outside" software dev photograph.
-My name is Dominic DeMarco, my education background is a BS in Computer Science, and I currently work in the industry as a software engineer.
+My name is Dominic DeMarco, my education background is a BS in Computer Science, and I have just under 10 years experience in the industry as a software engineer.
 
 In my free time I enjoy exploring anything technical that has struck my fancy. A lot of these projects you'll see are based around a loose
 "accomplish X with Y" intent, it's the way I've found I best learn things... and it's fun, too!
@@ -11,6 +11,8 @@ In my free time I enjoy exploring anything technical that has struck my fancy. A
 I've organized my projects in reverse chronological order. I'll add and related links and provide a short description for your perusing pleasure.
 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
+[Capacity-constrained variable bitrate video encoding framework](#capacity-constrained-variable-bitrate-video-encoding-framework)  
+[LLM Text Adventure Game](#llm-text-adventure-game)  
 [Centurion CPU6 LLVM Backend](#centurion-cpu6-llvm-backend)  
 [Nebula Client](#nebula-client)  
 [FeO](#feo)  
@@ -20,6 +22,41 @@ These links will bring you to the associated headings to save your scroll wheel 
 [Python Racing Game Bot](#python-racing-game-bot)  
 [Pascal-like Compiler](#pascal-like-compiler)  
 [Sensor Movement Classification](#sensor-movement-classification)  
+
+---
+### Capacity-constrained variable bitrate video encoding framework
+No code on github yet because I'm still fleshing out how I want to interact with this framework.  
+  
+This is a project I've been writing in python to address the following problem I've come across recently.  
+I'm the owner of a small collection of physical media (movies and TV shows mostly)  
+We're slowly but surely approaching the lifespan of older CDs and DVDs.  
+Instead of just backing up the raw data on these disks, I've made it a sort of personal challenge to squeeze as much video on a standard blu-ray disk as possible without sacrificing audio or video quality.  
+  
+In this situation, when it comes to compressing a video with a modern codec, there is a choice to be made.  
+Either you can get a near-exact file size with 2-pass encoding and deal with compression artifacts in bitrate-demanding scenes, or you can encode with a CRF (constant rate factor),
+and make an educated guess (or several attempts) to encode the video file until you end up with something that fills up the majority of the disk, but ultimately leaves capacity unused.  
+  
+I'm putting together something in an attempt to extract the best out of both worlds.  
+This framework allows the adding of an arbitrary amount of video files to a project, detects the cumulative runtime, and calculates the video bitrate required to fill near 100% of the blu ray disk's capacity.  
+(audio is pre-processed and taken into account)  
+It will then run several CRF-based passes on a limited amount of video to determine a polynomial function that best represents the bitrate of a given CRF value.  
+This is the key step, because this relationship, while almost always following a power curve, is unique for each video type. A live-action movie with film grain will have a much different
+crf-bitrate relationship than an animated series, for example.  
+It then determines the best-estimate CRF value that will result in the target bitrate for the disk, with configurable fine-tuning behavior until a bitrate/size accuracy threshhold is reached.  
+  
+---
+### LLM Text Adventure Game
+No code on github for this one yet as I'm still in the experimental stage (and things in this area move *quick*)  
+  
+I'm experimenting with the idea of creating a small cooperative dungeon crawler game playable through a medium like discord.  
+It relies heavily on large language models for the generation of room and item descriptions.  
+So far that aspect works well, everything is hosted locally with quantized models publically available from huggingface and run locally via llama.cpp.  
+Currently I'm vetting the capability of an LLM or NLP model to evaluate the viability of play input.  
+For example if a user tries to "search for water" in a desert, the model should return a low rate of success compared to "search for mushroom" in a forest.  
+  
+It's a great exercise in exploring the rapidly developing LLM ecosystem and getting experience with  
+a.) the various ways to host and interact with these models and  
+b.) understand their strengths and weakness in various situations.  
 
 ---
 ### Centurion CPU6 LLVM Backend
