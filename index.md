@@ -13,6 +13,7 @@ I've organized my projects in reverse chronological order. I'll add and related 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
 [Capacity-constrained variable bitrate video encoding framework](#capacity-constrained-variable-bitrate-video-encoding-framework)  
 [LLM Text Adventure Game](#llm-text-adventure-game)  
+[Vacuum Florescent Display Driver Board](#vacuum-florescent-display-driver-board)
 [Centurion CPU6 LLVM Backend](#centurion-cpu6-llvm-backend)  
 [Nebula Client](#nebula-client)  
 [FeO](#feo)  
@@ -57,6 +58,37 @@ For example if a user tries to "search for water" in a desert, the model should 
 It's a great exercise in exploring the rapidly developing LLM ecosystem and getting experience with  
 a.) the various ways to host and interact with these models and  
 b.) understand their strengths and weakness in various situations.  
+
+---
+### Vacuum Florescent Display Driver Board
+Crawling through the vintage electronics section of ebay one night I stumbled across some vintage IVL2-7/5 VFD displays that I thought could potentially form the basis of a fun clock project.  
+(Unique... I know)  
+This quickly turned into a lesson about how to actually drive a VFD display.  
+  
+For anyone familiar with the subject matter, this turned out to be more involved than I initially anticipated almost entirely due to a teeny tiny wire called the "filament"  
+A VFD functions by redirecting a stream of electrons to slam into one (or more) phosphor-laden segments in a multiplexed fashion. The multiplexing methodogy is similar to any LED-based 7 segment display.  
+The source of these electroncs is a teeny tiny wire excited with some current. It can't be too much current, that would destroy the filament... but it also can't be too much voltage, as that wouldn't produce enough current.  
+The datasheet for the small IVL2-7/5 VFD in particular, calls for about 2.4v across the filament at no more than 58mA.  
+"Great, so we'll just use a small linear regulator or voltage divider with a ballast resistor to limit the current, easy."  
+You might be tempted to think. Nope. This is a small enough voltage to sag across the thin filament's relatively high impedence span, resulting in an uneven brightness across the display...  
+So we've got to resort to an AC current source (positively biased, to futher complicate things).  
+  
+That was the motivation for this project, lets explore the result.  
+  
+I implemented an adjustable AC power source specifically designed for a VFD filament (virtual center tap and all) using a chip designed for mono audio amplification in a self-oscillating configuration.  
+Additionally I implemented an adjustable boost converter to provide the high-ish voltage for the anodes of the VFD from a standard 5v supply.  
+The result is the deceptively simple power supply board you can see below.  
+Each component needed to be carefully researched and compared with the principals of operation of a VFD.  
+This board is a useful tool that can be used to verify optimal voltage levels of a cathode (filament) and anodes (grid/segments) for nearly any low to mid voltage VFD.  
+In the future I plan on using the circuits vetted in this project to drive a display in a small desktop clock project.
+<img src="images/vfd_board.png" width="600">
+<img src="images/vfd_driver.jpg" width="600">
+<video width="600" controls loop muted autoplay>
+  <source src="/images/vfd_trimmed.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
 
 ---
 ### Centurion CPU6 LLVM Backend
