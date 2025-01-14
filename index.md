@@ -13,7 +13,7 @@ I've organized my projects in reverse chronological order. I'll add and related 
 These links will bring you to the associated headings to save your scroll wheel the trouble  
 [Capacity-constrained variable bitrate video encoding framework](#capacity-constrained-variable-bitrate-video-encoding-framework)  
 [LLM Text Adventure Game](#llm-text-adventure-game)  
-[Vacuum Florescent Display Driver Board](#vacuum-florescent-display-driver-board)
+[Vacuum Florescent Display Driver Board](#vacuum-florescent-display-driver-board)  
 [Centurion CPU6 LLVM Backend](#centurion-cpu6-llvm-backend)  
 [Nebula Client](#nebula-client)  
 [FeO](#feo)  
